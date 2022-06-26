@@ -43,10 +43,10 @@ def cutFile(fname, lastWantedColumn):
         if l[0].isdigit(): #detect if first char is a number
             txtOut += "\t".join(l.split()[:lastWantedColumn]) + "\n"
             #print(txtOut)
-    g = open(".".join(fname.split(".")[:-1]) + "_cutted." + fname.split(".")[-1], "w")
+    g = open(".".join(fname.split(".")[:-1]) + "_cutted_column." + fname.split(".")[-1], "w")
     g.write(txtOut)
     g.close()
-    print(f'Cutted & saved as {".".join(fname.split(".")[:-1]) + "_cutted." + fname.split(".")[-1]}')
+    print(f'Cutted & saved as {".".join(fname.split(".")[:-1]) + "_cutted_column." + fname.split(".")[-1]}')
 
 cutFile(output_dat_file, -12)
 
